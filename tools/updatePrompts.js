@@ -151,10 +151,8 @@ function nameToFilename(name) {
   // Convert to lowercase and replace special chars
   const filename = namePart
     .toLowerCase()
-    .replace(/\./g, '') // Remove dots
     .replace(/\s+/g, '-') // Spaces to hyphens
-    .replace(/[()]/g, '') // Remove parentheses
-    .replace(/\//g, '-') // Slashes to hyphens
+    .replace(/[^a-z0-9_-]/g, '') // Remove any char not a-z, 0-9, _, or -
     .replace(/-+/g, '-') // Collapse multiple hyphens
     .replace(/^-|-$/g, ''); // Trim hyphens from start/end
 

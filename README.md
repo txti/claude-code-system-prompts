@@ -1,6 +1,6 @@
 # Claude Code System Prompts
 
-This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.49](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.49) (November 20th, 2025).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 30 versions since v2.0.14.
+This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.49](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.49) (November 20th, 2025).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 31 versions since v2.0.14.
 
 Why multiple "system prompts?"
 
@@ -68,7 +68,7 @@ Sub-agents and utilities.
 
 Misc large strings.
 
-- [Data: GitHub Actions workflow for @claude mentions](./system-prompts/data-github-actions-workflow-for-@claude-mentions.md) (**531** tks) - GitHub Actions workflow template for triggering Claude Code via @claude mentions.
+- [Data: GitHub Actions workflow for @claude mentions](./system-prompts/data-github-actions-workflow-for-claude-mentions.md) (**531** tks) - GitHub Actions workflow template for triggering Claude Code via @claude mentions.
 - [Data: GitHub Actions workflow for automated code review (beta)](./system-prompts/data-github-actions-workflow-for-automated-code-review-beta.md) (**573** tks) - GitHub Actions workflow template for automated Claude Code reviews using direct_prompt.
 - [Data: GitHub App installation PR description](./system-prompts/data-github-app-installation-pr-description.md) (**424** tks) - Template for PR description when installing Claude Code GitHub App integration.
 -->
