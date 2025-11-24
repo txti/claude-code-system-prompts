@@ -4,6 +4,12 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.0.52](https://github.com/Piebald-AI/claude-code-system-prompts/commit/74f41c979c84103343d0d92f086678911e0b7d36)
+
+_+42 tokens_
+
+- Add a 4th note to the procedure steps in the Plan Mode Re-entry System Prompt: _"Continue on with the plan process and most importantly you should always edit the plan file one way or the other before calling ExitPlanMode._"
+
 # [2.0.51](https://github.com/Piebald-AI/claude-code-system-prompts/commit/fea594c92014ec7c6133e771afc1a55a034a15ee)
 
 _+906 tokens_
