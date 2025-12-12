@@ -26,7 +26,7 @@ Download it and try it out for free!  **https://piebald.ai/**
 
 # Claude Code System Prompts
 
-This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.62](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.62) (December 8th, 2025).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 43 versions since v2.0.14.  From the team behind [<img src="https://github.com/Piebald-AI/piebald/raw/main/assets/logo.svg" width="15"> **Piebald.**](https://piebald.ai/)
+This repository contains an up-to-date list of all Claude Code's various system prompts and their associated token counts as of **[Claude Code v2.0.63](https://www.npmjs.com/package/@anthropic-ai/claude-code/v/2.0.63) (December 9th, 2025).**  It also contains a [**CHANGELOG.md**](./CHANGELOG.md) for the system prompts across 44 versions since v2.0.14.  From the team behind [<img src="https://github.com/Piebald-AI/piebald/raw/main/assets/logo.svg" width="15"> **Piebald.**](https://piebald.ai/)
 
 Why multiple "system prompts?"
 
@@ -105,7 +105,7 @@ Misc large strings.
 
 Parts of the main system prompt.
 
-- [**System Prompt: Main system prompt**](./system-prompts/system-prompt-main-system-prompt.md) (**3033** tks) - Core system prompt for Claude Code defining behavior, tone, and tool usage policies.
+- [**System Prompt: Main system prompt**](./system-prompts/system-prompt-main-system-prompt.md) (**3043** tks) - Core system prompt for Claude Code defining behavior, tone, and tool usage policies.
 - [System Prompt: Learning mode (insights)](./system-prompts/system-prompt-learning-mode-insights.md) (**142** tks) - Instructions for providing educational insights when learning mode is active.
 - [System Prompt: Learning mode](./system-prompts/system-prompt-learning-mode.md) (**1042** tks) - System Prompt: Main system prompt for learning mode with human collaboration instructions.
 - [System Prompt: MCP CLI](./system-prompts/system-prompt-mcp-cli.md) (**1335** tks) - Instructions for using mcp-cli to interact with Model Context Protocol servers.
