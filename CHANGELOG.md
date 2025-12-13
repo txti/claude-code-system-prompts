@@ -4,6 +4,13 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.0.68](https://github.com/Piebald-AI/claude-code-system-prompts/commit/56e7a6a14afc956118ad8458b23aaa073d97416b)
+
+_-191 tokens_
+
+- Main system prompt: Added instruction to not use colons before tool calls ("Let me read the file." instead of "Let me read the file:")
+- **REMOVED:** Agent Prompt: /review-pr slash command
+
 #### [2.0.67](https://github.com/Piebald-AI/claude-code-system-prompts/commit/11cb562530596ac533e8ca1c0b8e59c56d59e68a)
 
 <sub>_No changes to the system prompts in v2.0.67._</sub>
