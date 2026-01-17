@@ -4,6 +4,13 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.1.10](https://github.com/Piebald-AI/claude-code-system-prompts/commit/9cb8c2c)
+
+_-118 tokens_
+
+- Agent Prompt: Session title and branch generation - added explicit instruction to use sentence case for titles (capitalize only the first word and proper nouns), not Title Case
+- Tool Description: Bash (Git commit and PR creation instructions) - simplified git commit --amend guidance by removing complex conditional rules (5 conditions about when amending is allowed); replaced with simpler CRITICAL directive to always create new commits and never use --amend unless user explicitly requests it; removed reference to "amend rules above" in pre-commit hook failure step
+
 # [2.1.9](https://github.com/Piebald-AI/claude-code-system-prompts/commit/0f37d97)
 
 _+963 tokens_
