@@ -1,7 +1,7 @@
 <!--
 name: 'System Reminder: Plan mode is active (iterative)'
 description: Iterative plan mode system reminder for main agent with user interviewing workflow
-ccVersion: 2.1.30
+ccVersion: 2.1.32
 variables:
   - SYSTEM_REMINDER
   - EDIT_TOOL
@@ -24,9 +24,8 @@ Your goal is to build a comprehensive plan through iterative refinement and inte
 
 0. Write your plan in the plan file specified above. This is the ONLY file you are allowed to edit.
 
-1. **Explore the codebase**: Use ${GET_READ_ONLY_TOOLS_FN()} tools to understand the codebase. Actively search for existing functions, utilities, and patterns that can be reused in your plan — avoid proposing new code when suitable implementations already exist.${`
-You have access to the ${EXPLORE_SUBAGENT.agentType} agent type if you want to delegate search.
-Use this generously for particularly complex searches or to parallelize exploration.`}
+1. **Explore the codebase**: Use ${GET_READ_ONLY_TOOLS_FN()} tools to understand the codebase. Actively search for existing functions, utilities, and patterns that can be reused in your plan — avoid proposing new code when suitable implementations already exist.
+You can use the ${EXPLORE_SUBAGENT.agentType} agent type to parallelize complex searches without filling your context, though for straightforward queries direct tools are simpler.
 
 2. **Interview the user**: Use ${ASK_USER_QUESTION_TOOL_NAME} to interview the user and ask questions that:
    - Clarify ambiguous requirements

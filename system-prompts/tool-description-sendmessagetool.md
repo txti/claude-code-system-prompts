@@ -1,12 +1,12 @@
 <!--
 name: 'Tool Description: SendMessageTool'
 description: Tool for sending messages to teammates and handling protocol requests/responses in a swarm
-ccVersion: 2.1.30
+ccVersion: 2.1.32
 -->
 
 # SendMessageTool
 
-Send messages to teammates and handle protocol requests/responses in a swarm.
+Send messages to agent teammates and handle protocol requests/responses in a team.
 
 ## Message Types
 
