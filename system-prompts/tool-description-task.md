@@ -1,7 +1,7 @@
 <!--
 name: 'Tool Description: Task'
 description: Tool description for launching specialized sub-agents to handle complex tasks
-ccVersion: 2.1.31
+ccVersion: 2.1.33
 variables:
   - TASK_TOOL_PREAMBLE
   - TASK_TOOL
@@ -14,7 +14,6 @@ variables:
   - BASH_TOOL
   - TASK_TOOL_OBJECT
   - WRITE_TOOL
-  - AGENT_TEAM_CHECK
 -->
 ${TASK_TOOL_PREAMBLE}
 
@@ -75,5 +74,3 @@ Since the user is greeting, use the greeting-responder agent to respond with a f
 </commentary>
 assistant: "I'm going to use the ${TASK_TOOL_OBJECT.name} tool to launch the greeting-responder agent"
 </example>
-${!AGENT_TEAM_CHECK()?`
-Note: The "Agent Teams" feature (TeammateTool, SendMessage, spawnTeam) is not available on this plan. Only mention this if the user explicitly asks for "agent teams" by name, or asks for agents to send messages to each other (peer-to-peer messaging). Do NOT mention this limitation when users ask for parallel subagents, coordinating agents, launching a "team" of agents, or having agents work together — those are all normal Task tool usage and you should proceed normally.`:""}

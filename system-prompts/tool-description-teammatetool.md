@@ -1,16 +1,10 @@
 <!--
 name: 'Tool Description: TeammateTool'
 description: Tool for managing teams and coordinating teammates in a swarm
-ccVersion: 2.1.32
+ccVersion: 2.1.33
 -->
 
-# TeammateTool
-
-Manage teams and coordinate agents on your team. Use this tool to create and clean up teams. To spawn new teammates, use the Task tool with \`team_name\` and \`name\` parameters.
-
-## Operations
-
-### spawnTeam - Create a Team
+# TeamCreate
 
 ## When to Use
 
@@ -35,33 +29,18 @@ Create a new team to coordinate multiple agents working on a project. Teams have
 
 \`\`\`
 {
-  "operation": "spawnTeam",
   "team_name": "my-project",
   "description": "Working on feature X"
 }
 \`\`\`
 
-This creates a team file and a corresponding task list directory.
-
-### cleanup - Clean Up Team Resources
-
-Remove team and task directories when work is complete:
-
-\`\`\`
-{
-  "operation": "cleanup"
-}
-\`\`\`
-
-This operation:
-- Removes the team and task directories
-- Clears team context from the current session
-
-**IMPORTANT**: \`cleanup\` will fail if the team still has active members. Gracefully terminate teammates first, then call \`cleanup\` after all teammates have shut down.
+This creates:
+- A team file at \`~/.claude/teams/{team-name}.json\`
+- A corresponding task list directory at \`~/.claude/tasks/{team-name}/\`
 
 ## Team Workflow
 
-1. **Create a team** with \`spawnTeam\` - this creates both the team and its task list
+1. **Create a team** with TeamCreate - this creates both the team and its task list
 2. **Create tasks** using the Task tools (TaskCreate, TaskList, etc.) - they automatically use the team's task list
 3. **Spawn teammates** using the Task tool with \`team_name\` and \`name\` parameters to create teammates that join the team
 4. **Assign tasks** using TaskUpdate with \`owner\` to give tasks to idle teammates
@@ -82,6 +61,8 @@ When you spawn teammates:
 - These messages appear automatically as new conversation turns (like user messages)
 - If you're busy (mid-turn), messages are queued and delivered when your turn ends
 - The UI shows a brief notification with the sender's name when messages are waiting
+
+Messages will be delivered automatically.
 
 When reporting on teammate messages, you do NOT need to quote the original message—it's already rendered to the user.
 
@@ -130,5 +111,5 @@ Teammates should:
 - Your team cannot hear you if you do not use the SendMessage tool. Always send a message to your teammates if you are responding to them.
 - Do NOT send structured JSON status messages like \`{"type":"idle",...}\` or \`{"type":"task_completed",...}\`. Just communicate in plain text when you need to message teammates.
 - Use TaskUpdate to mark tasks completed.
-- If you are an agent in the team, the system will automatically send idle notifications to the team lead when you stop. 
+- If you are an agent in the team, the system will automatically send idle notifications to the team lead when you stop.
 
